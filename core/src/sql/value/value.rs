@@ -438,6 +438,12 @@ impl From<Vec<i32>> for Value {
 	}
 }
 
+impl From<Vec<f32>> for Value {
+	fn from(v: Vec<f32>) -> Self {
+		Value::Array(Array::from(v))
+	}
+}
+
 impl From<Vec<Value>> for Value {
 	fn from(v: Vec<Value>) -> Self {
 		Value::Array(Array::from(v))
